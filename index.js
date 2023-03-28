@@ -4,8 +4,10 @@ let six = document.querySelector(".six");
 let eight = document.querySelector(".eight");
 let ten = document.querySelector(".ten");
 let pLength = document.querySelector(".password-length");
+let passwords = document.querySelector(".prev-passwords");
 
-let passwordLength;
+let passwordLength = 0;
+let prevPasswords = [];
 
 six.addEventListener("click", function () {
   passwordLength = 6;
@@ -29,4 +31,7 @@ function generateRandomString(passwordLength) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   passwordEl.textContent = result;
+  prevPasswords.push(result);
+
+  console.log(prevPasswords);
 }
