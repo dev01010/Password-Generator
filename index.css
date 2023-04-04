@@ -32,7 +32,8 @@ body {
 }
 .six,
 .eight,
-.ten {
+.ten,
+.default-btn {
   padding: 10px 18px;
   font-size: 20px;
   background-color: rgb(3, 17, 3);

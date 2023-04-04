@@ -5,10 +5,15 @@ let eight = document.querySelector(".eight");
 let ten = document.querySelector(".ten");
 let pLength = document.querySelector(".password-length");
 let passwords = document.querySelector(".prev-passwords");
+let defaultBtn = document.querySelector(".default-btn");
 
-let passwordLength = 0;
+let passwordLength = 12;
 let prevPasswords = [];
 
+defaultBtn.addEventListener("click", function () {
+  passwordLength = 12;
+  pLength.textContent = "Default Length " + passwordLength;
+});
 six.addEventListener("click", function () {
   passwordLength = 6;
   pLength.textContent = "Length: " + passwordLength;
