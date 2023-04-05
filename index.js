@@ -12,7 +12,7 @@ let prevPasswords = [];
 
 defaultBtn.addEventListener("click", function () {
   passwordLength = 12;
-  pLength.textContent = "Default Length " + passwordLength;
+  pLength.textContent = "Default Length: " + passwordLength;
 });
 six.addEventListener("click", function () {
   passwordLength = 6;
@@ -36,7 +36,13 @@ function generateRandomString(passwordLength) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   passwordEl.textContent = result;
-  prevPasswords.push(result);
 
-  console.log(prevPasswords);
+  prevPasswords.push(result);
+  // console.log(prevPasswords);
+
+  const prevPassword = document.createElement("p");
+  for (let index = 0; index < prevPasswords.length; index++) {
+    prevPassword.textContent = prevPasswords[index];
+    passwords.appendChild(prevPassword);
+  }
 }
