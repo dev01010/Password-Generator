@@ -39,7 +39,10 @@ function generateRandomString(passwordLength) {
 
   prevPasswords.push(result);
   // console.log(prevPasswords);
+  displayPrevPassword();
+}
 
+function displayPrevPassword() {
   const prevPassword = document.createElement("p");
   for (let index = 0; index < prevPasswords.length; index++) {
     prevPassword.textContent = prevPasswords[index];
